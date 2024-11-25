@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table style="border: 1px solid black;">
+        <tr style="border: 1px solid black;">
+        <th style="border: 1px solid black;">name </th>
+        <th style="border: 1px solid black;">description</th>
+        <th style="border: 1px solid black;">price</th>
+        <th style="border: 1px solid black;">stock_quantity</th>
+        <th style="border: 1px solid black;">created_at</th>
+        <th style="border: 1px solid black;">update</th>
+        <th style="border: 1px solid black;">delete</th>
+        </tr>
+
+        {%for i in data%}
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">{{i.name}}</td>
+            <td style="border: 1px solid black;">{{i.description}}</td>
+            <td style="border: 1px solid black;">{{i.price}}</td>
+            <td style="border: 1px solid black;">{{i.stock_quantity}}</td>
+            <td style="border: 1px solid black;">{{i.created_at}}</td>
+            <td style="border: 1px solid black;"><a href="#">update</a> </td>
+            <td style="border: 1px solid black;"><a href="#">delete</a></td>
+
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
