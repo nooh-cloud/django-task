@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" >
+        {% csrf_token %}
+        <label for="name">first_Name</label>
+        <input type="text" name="names"><br>
+        <label for="name">last_Name</label>
+        <input type="text" name="namess"><br>
+        <label for="email">email</label>
+        <input type="text" name="emaill"><br>
+        <label for="phone">phone</label>
+        <input type="text" name="phones"><br>
+        <label for="address">address</label>
+        <input type="text" name="addresss"><br>
+        <label for="DOB">date of birth</label>
+        <input type="text" name="births"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
