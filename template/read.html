@@ -6,13 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    {%for i in data%}
-    <h4>{{i.first_name}}</h4>
-    <h4>{{i.last_name}}</h4>
-    <h4>{{i.email_field}}</h4>
-    <h4>{{i.phone}}</h4>
-    <h4>{{i.address}}</h4>
-    <h4>{{i.date_of_birth}}</h4>
-    {%endfor%}
+    <table border="3">
+        <tr>
+            <th>first_Name</th>
+            <th>last_name</th>
+            <th>Email</th>
+            <th>phone</th>
+            <th>address</th>
+            <th>date_of_birth</th>
+        </tr>
+        {% for i in data %}
+
+        <tr>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.email_field}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.date_of_birth}}</td>
+            <td><a href="{% url 'update1' i.id %}">Update</a></td>
+            <td><a href="{% url 'delete1' i.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+
+
+
+    </table>
+  
 </body>
 </html>

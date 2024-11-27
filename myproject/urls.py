@@ -22,5 +22,7 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('read',views.read,name='read1'),
-    path('create',views.create,name='creates')
+    path('create',views.create,name='creates'),
+    path('update/<int:id>',views.update,name='update1'),
+    path('delete/<int:id>',views.delete,name='delete1'),
 ]
