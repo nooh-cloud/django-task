@@ -25,4 +25,8 @@ urlpatterns = [
     path('create',views.create,name='creates'),
     path('update/<int:id>',views.update,name='update1'),
     path('delete/<int:id>',views.delete,name='delete1'),
+    path('reads',views.read1,name='read2'),
+    path('creates',views.create1,name='createss'),
+    path('update1/<int:id>',views.update1,name='update2'),
+    path('delete1/<int:id>',views.delete1,name='delete2'),
 ]

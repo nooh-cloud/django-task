@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="3">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock Quantity</th>
+            <th>Created</th>
+        </tr>
+
+        {%for i in data%}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.stock_quantity}}</td>
+            <td>{{i.created}}</td>
+            <td><a href="{% url 'update2' i.id %}">Update</a></td>
+            <td><a href="{% url 'delete2' i.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
